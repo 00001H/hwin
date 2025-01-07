@@ -1,0 +1,79 @@
+.hwin-menu{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.hwin-bar-menu{
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.hwin-floating-menu{
+    flex-direction: column;
+    position: fixed;
+    border: 1px solid black;
+}
+.hwin-separator{
+    margin: 8px;
+}
+.hwin-button{
+    border: none;
+    background-color: lightgray;
+}
+.hwin-menu-button{
+    padding: 0.4em;
+}
+.hwin-button:hover{
+    filter: brightness(0.85);
+}
+.hwin-button:active{
+    filter: brightness(0.6);
+}
+.hwin-floating-menu>.hwin-submenu-button{
+    padding-right: 0.2em;
+}
+.hwin-floating-menu>.hwin-submenu-button::after{
+    content: "🢒";
+    margin-left: 0.4em;
+}
+.hwin-page{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.hwin-menu-bar{
+    z-index: 1;
+}
+.hwin-playground{
+    flex-grow: 1;
+    z-index: 0;
+}
+.hwin-window{
+    position: absolute;
+    border: 1px groove black;
+    width: fit-content;
+    height: fit-content;
+    box-sizing: border-box;
+    background-color: white;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+.hwin-window>:last-child{
+    flex-grow: 1;
+}
+.hwin-resizable{
+    resize: both;
+}
+.hwin-window-controls{
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2px;
+    margin: 0;
+    border-bottom: 1px solid black;
+    user-select: none;
+    -webkit-user-select: none; /*Safari requires vendor prefix*/
+}
+.hwin-window-minimize-control{
+    margin-left: auto;
+}
